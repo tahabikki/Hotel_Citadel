@@ -1,36 +1,36 @@
-﻿# ðŸ¨ Citadel Hotel - Modern Next.js + Supabase Stack
+﻿# 🏨 Citadel Hotel - Modern Next.js + Supabase Stack
 
 A modern, full-featured Hotel Property Management System built with Next.js 16, Supabase, and TypeScript.
 
-## ðŸ— Architecture
+## 🏗 Architecture
 
 ### Modern Monorepo (2025 Standard)
 ```
 citadel-hotel/
-â”œâ”€â”€ frontend/                      # Next.js app (frontend + backend)
-â”‚   â”œâ”€â”€ src/
-â”‚   â”‚   â”œâ”€â”€ app/
-â”‚   â”‚   â”‚   â”œâ”€â”€ api/              # API routes (replaces /backend)
-â”‚   â”‚   â”‚   â”œâ”€â”€ admin/            # Admin dashboard
-â”‚   â”‚   â”‚   â”œâ”€â”€ rooms/            # Room listing
-â”‚   â”‚   â”‚   â”œâ”€â”€ reservations/     # Booking interface
-â”‚   â”‚   â”‚   â””â”€â”€ ...
-â”‚   â”‚   â”œâ”€â”€ components/           # React components
-â”‚   â”‚   â”œâ”€â”€ lib/
-â”‚   â”‚   â”‚   â”œâ”€â”€ supabase.ts       # Supabase client
-â”‚   â”‚   â”‚   â”œâ”€â”€ supabase-storage.ts # File storage
-â”‚   â”‚   â”‚   â”œâ”€â”€ prisma.ts         # Database client
-â”‚   â”‚   â”‚   â””â”€â”€ services/         # Business logic
-â”‚   â”‚   â””â”€â”€ styles/               # CSS/Tailwind
-â”‚   â”œâ”€â”€ prisma/
-â”‚   â”‚   â””â”€â”€ schema.prisma         # Database schema
-â”‚   â””â”€â”€ package.json
-â”œâ”€â”€ .env.local.example            # Environment template
-â”œâ”€â”€ MIGRATION_GUIDE.md            # Architecture migration docs
-â””â”€â”€ README.md                      # This file
+├── frontend/                      # Next.js app (frontend + backend)
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── api/              # API routes (replaces /backend)
+│   │   │   ├── admin/            # Admin dashboard
+│   │   │   ├── rooms/            # Room listing
+│   │   │   ├── reservations/     # Booking interface
+│   │   │   └── ...
+│   │   ├── components/           # React components
+│   │   ├── lib/
+│   │   │   ├── supabase.ts       # Supabase client
+│   │   │   ├── supabase-storage.ts # File storage
+│   │   │   ├── prisma.ts         # Database client
+│   │   │   └── services/         # Business logic
+│   │   └── styles/               # CSS/Tailwind
+│   ├── prisma/
+│   │   └── schema.prisma         # Database schema
+│   └── package.json
+├── .env.local.example            # Environment template
+├── MIGRATION_GUIDE.md            # Architecture migration docs
+└── README.md                      # This file
 ```
 
-## ðŸš€ Quick Start
+## 🚀 Quick Start
 
 ### 1. Prerequisites
 - Node.js 18+ and npm 8+
@@ -62,20 +62,20 @@ npm run dev
 
 Visit `http://localhost:3000`
 
-## ðŸ“š Key Features
+## 📚 Key Features
 
-âœ… **Room Management** - Create, edit, manage room inventory  
-âœ… **Reservations** - Book rooms with date range availability  
-âœ… **Guest Management** - Track guest information and preferences  
-âœ… **Payments** - Stripe integration for secure transactions  
-âœ… **Staff Management** - Track staff roles, schedules, and departments  
-âœ… **Housekeeping** - Task assignment and tracking  
-âœ… **Inventory** - Manage minibar, linens, amenities  
-âœ… **Pricing** - Seasonal rates and dynamic pricing  
-âœ… **Media** - Upload and manage hotel images  
-âœ… **Admin Dashboard** - Comprehensive management interface  
+✅ **Room Management** - Create, edit, manage room inventory  
+✅ **Reservations** - Book rooms with date range availability  
+✅ **Guest Management** - Track guest information and preferences  
+✅ **Payments** - Stripe integration for secure transactions  
+✅ **Staff Management** - Track staff roles, schedules, and departments  
+✅ **Housekeeping** - Task assignment and tracking  
+✅ **Inventory** - Manage minibar, linens, amenities  
+✅ **Pricing** - Seasonal rates and dynamic pricing  
+✅ **Media** - Upload and manage hotel images  
+✅ **Admin Dashboard** - Comprehensive management interface  
 
-## ðŸ›  Tech Stack
+## 🛠 Tech Stack
 
 | Layer | Technology | Purpose |
 |-------|-----------|---------|
@@ -89,7 +89,7 @@ Visit `http://localhost:3000`
 | **Language** | TypeScript | Type safety |
 | **Deployment** | Vercel/Railway | Hosting |
 
-## ðŸ“ API Routes
+## 📁 API Routes
 
 All API endpoints are under `/api/*`:
 
@@ -128,7 +128,7 @@ GET    /api/contact               # List contact submissions
 POST   /api/contact               # Submit contact form
 ```
 
-## ðŸ—„ Database Schema
+## 🗄 Database Schema
 
 The Prisma schema includes:
 
@@ -146,7 +146,7 @@ The Prisma schema includes:
 
 See `frontend/prisma/schema.prisma` for full schema.
 
-## ðŸ“– Usage Examples
+## 📖 Usage Examples
 
 ### Fetch Rooms
 ```typescript
@@ -189,7 +189,7 @@ const bookings = await prisma.reservation.findMany({
 });
 ```
 
-## ðŸ”§ Configuration
+## ⚙ Configuration
 
 ### Environment Variables
 ```bash
@@ -210,7 +210,7 @@ STRIPE_SECRET_KEY=sk_live_...
 NODE_ENV=development
 ```
 
-## ðŸš€ Deployment
+## 🚀 Deployment
 
 ### Vercel (Recommended)
 ```bash
@@ -240,7 +240,7 @@ npm run build
 npm run start
 ```
 
-## ðŸ“Š Development
+## 📊 Development
 
 ### Scripts
 ```bash
@@ -261,23 +261,23 @@ npx prisma studio          # Open browser IDE
 npx prisma db seed         # Seed database
 ```
 
-## ðŸ” Security
+## 🔐 Security
 
-âœ… Type-safe database queries (Prisma)  
-âœ… Server-side rendering for sensitive data  
-âœ… Environment variables for secrets  
-âœ… CORS configured for API security  
-âœ… Stripe PCI compliance  
-âœ… Input validation on routes  
+✅ Type-safe database queries (Prisma)  
+✅ Server-side rendering for sensitive data  
+✅ Environment variables for secrets  
+✅ CORS configured for API security  
+✅ Stripe PCI compliance  
+✅ Input validation on routes  
 
-## ðŸ“š Documentation
+## 📚 Documentation
 
 - **[MIGRATION_GUIDE.md](./MIGRATION_GUIDE.md)** - From traditional to modern architecture
 - **[Supabase Docs](https://supabase.com/docs)** - Database & storage
 - **[Next.js Docs](https://nextjs.org/docs)** - Framework
 - **[Prisma Docs](https://www.prisma.io/docs)** - ORM
 
-## ðŸ› Troubleshooting
+## 🛠 Troubleshooting
 
 ### Port already in use
 ```bash
@@ -304,15 +304,15 @@ rm -rf node_modules package-lock.json
 npm install
 ```
 
-## ðŸ“ License
+## 📝 License
 
 Private project - Citadel Hotel Management System
 
-## ðŸ‘¨â€ðŸ’¼ Team
+## 👤 Team
 
 **Author**: Taha Bikki  
 **Project**: Citadel Hotel PMS  
-**Version**: 2.0.0 (Modern Stack)  
+**Version**: 2.0.0 (Modern Stack)
 
 ---
 
@@ -321,9 +321,10 @@ Private project - Citadel Hotel Management System
 
 ## Add a New Module
 
-2. Add the backend or frontend service that owns the business logic.
-3. Keep the route or UI layer thin and call the service instead of duplicating rules.
-4. Use the storage or DB adapter layer for persistence concerns.
+1. Define the module schema in `prisma/schema.prisma` with appropriate relations
+2. Add the backend or frontend service that owns the business logic
+3. Keep the route or UI layer thin and call the service instead of duplicating rules
+4. Use the storage or DB adapter layer for persistence concerns
 
 ## Getting Started
 
